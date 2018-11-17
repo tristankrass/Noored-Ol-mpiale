@@ -1,0 +1,74 @@
+// @import "base/base";
+@import "base/mixin";
+@import "abstracts/buttons";
+@import "abstracts/variables";
+@import "abstracts/transitions";
+@import "typograpfy";
+@import "layout/grid";
+@import "layout/keskmine";
+@import "layout/video";
+
+
+
+.thingsBeFixed {
+  position: absolute;
+  top: 107vh;
+  right: 11%;
+  z-index: 1000;
+
+}
+.thingsBeFixed-span {
+  top: 118vh;
+  position: absolute;
+  right: 11%;
+  z-index: 1000;
+}
+
+.displayNonePhone {
+  @include respond(phone) {
+    display: none;
+  }
+}
+.active {
+  border-bottom: 2px solid white;
+}
+.leiavoitja {
+
+  @include respond(phone) {
+    display: none;
+  }
+}
+
+.section1LogoForDesktop {
+  position: absolute;
+  left: 7%;
+  top: 4rem;
+
+  @include respond(tablet) {
+    left: 4rem;
+    top: 2rem;
+  }
+
+  @include respond(phone) {
+    display: none;
+  }
+
+}
+
+.thingsBeFixedLogo {
+  position: absolute;
+  top: 107vh;
+  right: 11%;
+  z-index: 1000;
+
+}
+.leiavoitja {
+  color: $color-primary;
+
+  &:hover {
+    text-decoration: none;
+    outline: none;
+    border: none;
+  }
+}
+

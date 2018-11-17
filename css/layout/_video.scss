@@ -1,0 +1,87 @@
+
+#video {
+  width: 100%;
+  height: 85%;
+  z-index: 10000;
+
+
+
+  @include respond(phone) {
+    height: 50vh;
+    margin-top: 25%;
+  }
+}
+
+
+
+.modal {
+  display: none;
+  z-index: 10000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  background-color: black;
+
+  @include respond(phone) {
+    background-color: #434343;
+  }
+}
+
+.modal-content {
+  z-index: 10000;
+  position: relative;
+  background-color: #1137e9;
+  width: 100%;
+  height: 100vh;
+  box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.2);
+  animation-name: modalopen;
+  animation-duration: 2s;
+
+  @include respond(phone) {
+    background-color: #434343;
+  }
+}
+@keyframes modalopen {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+.videoNumberMobileH1 {
+  font-size: 1rem;
+  color: white;
+}
+.buttonsForVideo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 3rem;
+  @include respond(phone) {
+    margin-left: 0;
+  }
+}
+.numbersAndStuff {
+  margin-left: auto;
+  margin-right: 10%;
+
+  @include respond(phone) {
+    display: none;
+
+  }
+
+  .videoNumberDesktopVideo {
+    font-size: 4rem;
+    color: white;
+    font-weight: 400;
+    a {
+      color: white;
+    }
+  }
+  .videoNumberDesktopVideoSpan {
+    float: right;
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,198 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+
+body {
+  box-sizing: border-box; }
+
+body, html {
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #1137e9;
+
+}
+body {
+  font-family: "Open Sans";
+  font-size: 62.5%;
+
+  @include respond(phone) {
+    font-size: 50%;
+  }
+}
+
+
+.heading {
+  font-size: 4rem;
+  line-height: 4rem;
+  font-weight: 300;
+  @include respond(tablet) {
+    font-size: 3rem;
+    line-height: 4rem;
+  }
+  @include respond(phone) {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+.paragraph {
+  color: white;
+  font-size: 1.4em;
+  line-height: 1.5rem;
+  @include respond(tablet) {
+    font-size: 1.3rem;
+    line-height: 1.6rem;
+  }
+  @include respond(phone) {
+    font-size: 1rem;
+
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+  }
+}
+.paragraph__calltext {
+  text-transform: uppercase;
+}
+.section__1_paragraph-reverse {
+  margin: 0;
+  position: absolute;
+  right: 0.5rem;
+  top: 39%;
+  transform: rotate(270deg);
+  z-index: 10;
+
+  &::before {
+    content: '';
+    display: inline-block;
+    height: 1px;
+    width: 50px;
+    margin-right: 3px;
+    margin-bottom: 3px;
+
+    background-color: white;
+  }
+
+  @include respond(phone) {
+    top: 35%;
+    right: -5%;
+  }
+
+  &:hover {
+    text-decoration: none;
+    // border-bottom: 2px solid white;
+    cursor: pointer;
+    color: white;
+  }
+}
+
+.heading__number-desktop {
+  margin: 0;
+  position: fixed;
+  top: 79%;
+  right: 11rem;
+  z-index: 10;
+  color: white;
+  font-weight: 700;
+  font-size: 5rem;
+
+
+  @include respond(tablet) {
+    right: 3rem;
+  }
+  @include respond(phone) {
+    display: none;
+  }
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+.heading__number-desktop-span {
+  position: fixed;
+  top: 90%;
+  right: 11rem;
+  z-index: 10;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 1rem;
+  @include respond(tablet) {
+    right: 3rem;
+  }
+  @include respond(phone) {
+    display: none;
+  }
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+
+.videoNumberMobileH1 {
+  display: none;
+
+  @include respond(phone) {
+    display: block;
+    text-align: right;
+    margin-right: 7%;
+    color: white;
+  }
+}
+span.videoNumberMobileSpan {
+  display: none;
+  @include respond(phone) {
+    display: block;
+    text-align: right;
+    margin-right: 13%;
+    font-size: 1rem;
+  }
+}
+a.videoNumberMobile {
+  @include respond(phone) {
+    font-size: 2rem;
+    text-align: right;
+    margin-right: 7%;
+    color: white;
+
+    a {
+      color: white;
+    }
+  }
+  &:hover {
+    color: white;
+    text-decoration: none;
+  }
+}
+.mobileCallingNumber {
+
+
+  @include respond(phone) {
+    text-align: right;
+  }
+}
+.mobileCallingNumberTextSpan {
+
+
+  @include respond(phone) {
+  }
+}
+.blockforMobile {
+  display: none;
+
+
+  @include respond(phone) {
+    display: block;
+    position: absolute;
+    color: white;
+    top: 14%;
+    right: 5%;
+    text-transform: uppercase;
+  }
+}

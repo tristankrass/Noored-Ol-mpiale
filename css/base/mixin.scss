@@ -1,0 +1,36 @@
+// Media Queries I made for this project
+
+/*
+  Phone: Max-width: 440px;
+  Tablet/LaptopSmall: Max-width: 1368px;
+  Big-Screen: Min-width: 1368px;
+ */
+
+@mixin respond($breakpoint) {
+
+  @if $breakpoint == phone {
+    @media (max-width: 37.5em) { @content }
+  };
+
+  @if $breakpoint == tablet {
+      @media (max-width: 75em) { @content }
+  };
+
+  @if $breakpoint == landscape {
+      @media (max-width: 78em) { @content }
+  };
+
+}
+
+.row {
+
+  width: 100%;
+ /* @include respond(tablet){
+    flex-direction: column;
+  }*/
+}
+#onTablet {
+  @include respond(tablet){
+    width: 100%;
+  }
+}
